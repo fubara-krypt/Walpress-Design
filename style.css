@@ -713,6 +713,16 @@ img {
     overflow: hidden;
 }
 
+.case_image {
+    display: flex;
+    height: 420px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 54px;
+    flex: 1 0 0;
+    border-radius: 32px;
+}
+
 .iphone-mockup2 {
     background: transparent;
     position: relative;
@@ -736,7 +746,7 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 64px;
-    align-self: stretch; 
+    align-self: stretch;
 }
 
 .wrapper>p,
@@ -749,52 +759,58 @@ img {
     letter-spacing: 3px;
 }
 
-.accordion {
-    background-color: white;
-    color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 2rem 2.5rem;
-    border: none;
-    outline: none;
-    transition: 0.4s;
+.faq_wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
+    width: 768px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
 }
 
-.accordion i {
-    font-size: 1.6rem;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
 
-.active,
-.accordion:hover {
-    background-color: #f1f7f5;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
 }
 
-.pannel {
-    padding: 0 2rem 2.5rem 2rem;
-    background-color: white;
-    overflow: hidden;
-    background-color: #f1f7f5;
-    display: none;
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
 
-.pannel p {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 1.2rem;
-    line-height: 1.4;
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
 }
 
-.faq {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-.faq.active {
-    border: none;
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 /* FOOTER SECTION */
