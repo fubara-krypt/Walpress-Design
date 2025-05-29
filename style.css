@@ -75,6 +75,7 @@ header {
 
 .action_btn:hover {
     scale: 1.05;
+    cursor: pointer;
     color: #000;
 }
 
@@ -216,6 +217,7 @@ button {
     color: white;
     align-items: center;
     border-radius: 8px;
+    cursor: pointer;
     font-family: "Chakra Petch";
 }
 
@@ -269,6 +271,7 @@ img {
     display: flex;
     padding: 16px 32px;
     align-items: center;
+    cursor: pointer;
 }
 
 /* About Section */
